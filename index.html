@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List App</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Splash Screen -->
+  <section id="splash-screen" class="screen active">
+    <div class="content text-center">
+      <h1 class="display-4 text-white">Boost Your Productivity</h1>
+      <p class="lead text-white">Organize your workflow with ease.</p>
+      <button id="get-start-btn" class="btn btn-lg btn-success">Get Started</button>
+    </div>
+  </section>
+
+  <!-- Dashboard (Task List) -->
+  <section id="dashboard" class="screen container">
+    <div class="header text-center mt-5">
+      <h2>Task Progress: <span id="task-progress">0%</span></h2>
+    </div>
+    <div class="task-list mt-4">
+      <h3 class="text-center">My Tasks</h3>
+      <ul id="tasks" class="list-group mt-3">
+        <!-- Tasks will be dynamically added here -->
+      </ul>
+    </div>
+    <div class="add-task mt-4 text-center">
+      <input type="text" id="new-task" class="form-control mb-2" placeholder="Add a new task...">
+      <button id="add-task-btn" class="btn btn-primary"><i class="fas fa-plus"></i> Add Task</button>
+    </div>
+  </section>
+
+  <!-- Task Detail Modal -->
+  <div id="task-modal" class="modal">
+    <div class="modal-content p-4">
+      <span class="close-btn">&times;</span>
+      <h3 id="task-title" class="mb-3">Task Title</h3>
+      <p>Due Date: <span id="due-date">N/A</span></p>
+      <div class="text-center">
+        <button id="mark-complete-btn" class="btn btn-success mb-2"><i class="fas fa-check"></i> Mark as Complete</button>
+        <button id="delete-task-btn" class="btn btn-danger"><i class="fas fa-trash"></i> Delete Task</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Custom Script -->
+  <script src="script.js"></script>
+</body>
+</html>
